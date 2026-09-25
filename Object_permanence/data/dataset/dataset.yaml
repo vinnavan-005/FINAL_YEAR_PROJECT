@@ -1,0 +1,5 @@
+names:
+  0: ball
+path: C:/Users/ersib/Desktop/NVIDIA/Object_permanence/data/dataset
+train: images/train
+val: images/val

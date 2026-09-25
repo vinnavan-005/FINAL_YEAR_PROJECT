@@ -1,0 +1,6 @@
+frame,master_track_id,raw_tracker_id,class_name,occlusion_gap_frames,prediction_error_px,matching_cost,event
+38,2,2,ball,27,102.51,0.0561,MEMORY_RECOVERY_SUCCESS
+49,2,2,ball,2,6.02,0.0294,MEMORY_RECOVERY_SUCCESS
+69,2,3,ball,18,300.26,0.3114,MEMORY_RECOVERY_SUCCESS
+117,1,1,box,2,0.84,0.0038,MEMORY_RECOVERY_SUCCESS
+185,1,1,box,1,1.17,0.011,MEMORY_RECOVERY_SUCCESS

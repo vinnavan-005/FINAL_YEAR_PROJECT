@@ -1,0 +1,26 @@
+analysis:
+  max_reappearance_gap: 90
+  min_missing_frames: 3
+  size_similarity_thresh: 0.6
+  spatial_proximity_thresh: 0.35
+model:
+  yolo_weights: "yolov8x-worldv2.pt" # YOLO-World Open-Vocabulary Zero-Shot Model
+  tracker_config: "bytetrack.yaml"    # Built-in ByteTrack tracker
+  conf_threshold: 0.35              # Calibrated confidence threshold
+  iou_threshold: 0.35               # NMS IoU threshold
+  img_size: 1280                    # High-resolution inference (native 1280px resolution)
+  device: 0                         # NVIDIA dGPU (GeForce RTX 4060 Laptop GPU)
+  custom_prompts: ["ball", "box"]   # Open-Vocabulary target prompts
+output:
+  save_annotated_video: true
+  save_csv_detections: true
+  save_plots: true
+  save_summary_report: true
+memory_bank:
+  enabled: true
+  max_reappearance_gap: 90
+  spatial_proximity_thresh: 0.35
+  size_similarity_thresh: 0.60
+  velocity_smooth_alpha: 0.70
+  render_ghost_boxes: true
+

@@ -1,0 +1,31 @@
+# Exclude other projects as requested
+crowcivic_chatbot_backend/
+
+# Virtual Environment (Captured via requirements.txt)
+venv/
+.venv/
+env/
+ENV/
+
+# Large Model Weights (>100MB blocked by GitHub remote limits)
+*.pt
+*.pth
+*.bin
+*.onnx
+*.engine
+*.weights
+*.safetensors
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ipynb_checkpoints/
+
+# OS and IDE artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.tmp

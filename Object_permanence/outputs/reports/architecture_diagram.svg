@@ -1,0 +1,278 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" style="background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Arrow Marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+    </marker>
+    <marker id="arrow-future" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#7e22ce" />
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0f766e" />
+    </marker>
+
+    <!-- Shadows -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <!-- Header Banner -->
+  <rect x="0" y="0" width="1920" height="110" fill="url(#title-grad)" />
+  <text x="60" y="48" fill="#ffffff" font-size="28" font-weight="700" letter-spacing="0.5">Object Permanence in AI-Generated Videos: Detection &amp; Tracking-Based Evaluation</text>
+  <text x="60" y="82" fill="#94a3b8" font-size="17" font-weight="500">Undergraduate Research Architecture Diagram — 30% Prototype Implementation vs. 70% Proposed Future Work</text>
+
+  <!-- ========================================== -->
+  <!-- REGION 1: CURRENT IMPLEMENTATION (~30%)     -->
+  <!-- ========================================== -->
+  <rect x="50" y="130" width="1220" height="880" rx="16" fill="#ffffff" stroke="#0f766e" stroke-width="3" filter="url(#shadow)" />
+  
+  <!-- Region 1 Title Header -->
+  <rect x="50" y="130" width="1220" height="50" rx="16" fill="#0f766e" />
+  <rect x="50" y="160" width="1220" height="20" fill="#0f766e" />
+  <text x="80" y="163" fill="#ffffff" font-size="20" font-weight="700">CURRENT IMPLEMENTATION — ~30% SYSTEM PIPELINE</text>
+  <text x="1240" y="163" fill="#ccfbf1" font-size="14" font-weight="600" text-anchor="end">Status: Fully Operational Baseline</text>
+
+  <!-- 1. Input Module -->
+  <g transform="translate(80, 205)">
+    <rect x="0" y="0" width="340" height="150" rx="10" fill="#f0f9ff" stroke="#0284c7" stroke-width="2" />
+    <text x="20" y="32" fill="#0369a1" font-size="16" font-weight="700">1. AI-Generated Video Input</text>
+    <text x="20" y="55" fill="#475569" font-size="13" font-weight="500">Tech: Python + OpenCV (cv2.VideoCapture)</text>
+    
+    <!-- Mini Scenario Diagram -->
+    <rect x="20" y="70" width="300" height="65" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <circle cx="50" cy="102" r="14" fill="#a855f7" />
+    <text x="44" y="106" fill="#ffffff" font-size="10" font-weight="700">ID 1</text>
+    
+    <path d="M 72 102 L 95 102" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+    
+    <!-- Box obstacle -->
+    <rect x="102" y="85" width="45" height="34" rx="3" fill="#64748b" />
+    <text x="110" y="106" fill="#ffffff" font-size="10" font-weight="700">BOX</text>
+    
+    <path d="M 155 102 L 180 102" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+    
+    <!-- Reappeared Object -->
+    <circle cx="205" cy="102" r="14" fill="#3b82f6" />
+    <text x="199" y="106" fill="#ffffff" font-size="10" font-weight="700">ID ?</text>
+    
+    <text x="230" y="98" fill="#0f172a" font-size="11" font-weight="700">Identity?</text>
+    <text x="230" y="112" fill="#ef4444" font-size="10" font-weight="600">ID Switch?</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <path d="M 420 280 L 450 280" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow)" />
+
+  <!-- 2. Object Detection Module -->
+  <g transform="translate(460, 205)">
+    <rect x="0" y="0" width="350" height="150" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2" />
+    <text x="20" y="32" fill="#047857" font-size="16" font-weight="700">2. Object Detection</text>
+    <text x="20" y="55" fill="#475569" font-size="13" font-weight="500">Tech: Pretrained Ultralytics YOLOv8</text>
+    
+    <rect x="20" y="70" width="310" height="65" rx="6" fill="#ffffff" stroke="#a7f3d0" stroke-width="1" />
+    <text x="35" y="92" fill="#065f46" font-size="12" font-weight="600">• Bounding Box: (x1, y1, x2, y2)</text>
+    <text x="35" y="110" fill="#065f46" font-size="12" font-weight="600">• Confidence Score &amp; Target Class</text>
+    <text x="220" y="101" fill="#059669" font-size="11" font-weight="700">[Conf ≥ 0.25]</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <path d="M 810 280 L 840 280" stroke="#059669" stroke-width="3" marker-end="url(#arrow)" />
+
+  <!-- 3. Object Tracking Module -->
+  <g transform="translate(850, 205)">
+    <rect x="0" y="0" width="380" height="150" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2" />
+    <text x="20" y="32" fill="#047857" font-size="16" font-weight="700">3. Multi-Object Tracking</text>
+    <text x="20" y="55" fill="#475569" font-size="13" font-weight="500">Tech: ByteTrack (Integrated Kalman Filter)</text>
+    
+    <rect x="20" y="70" width="340" height="65" rx="6" fill="#ffffff" stroke="#a7f3d0" stroke-width="1" />
+    <text x="35" y="92" fill="#065f46" font-size="12" font-weight="600">• Frame-to-Frame Track Association</text>
+    <text x="35" y="110" fill="#065f46" font-size="12" font-weight="600">• Assigns Persistent Track ID (ID 1, ID 2...)</text>
+  </g>
+
+  <!-- Downward Arrow to Row 2 -->
+  <path d="M 1040 355 L 1040 395 L 250 395 L 250 435" stroke="#0f766e" stroke-width="3" fill="none" marker-end="url(#arrow-teal)" />
+
+  <!-- 4. Temporal Object State Representation -->
+  <g transform="translate(80, 440)">
+    <rect x="0" y="0" width="340" height="210" rx="10" fill="#fffbe6" stroke="#d97706" stroke-width="2" />
+    <text x="20" y="32" fill="#b45309" font-size="16" font-weight="700">4. Object State Log</text>
+    <text x="20" y="55" fill="#475569" font-size="13" font-weight="500">Tech: NumPy + Pandas Logging</text>
+    
+    <rect x="15" y="68" width="310" height="128" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1" />
+    <text x="28" y="90" fill="#1e293b" font-family="monospace" font-size="12">track_id    : 1</text>
+    <text x="28" y="108" fill="#1e293b" font-family="monospace" font-size="12">class_name  : Target Object</text>
+    <text x="28" y="126" fill="#1e293b" font-family="monospace" font-size="12">center_x,y  : (108.6, 384.8)</text>
+    <text x="28" y="144" fill="#1e293b" font-family="monospace" font-size="12">width,height: (159.3, 345.9)</text>
+    <text x="28" y="162" fill="#1e293b" font-family="monospace" font-size="12">frame_num   : 25</text>
+    <text x="28" y="180" fill="#1e293b" font-family="monospace" font-size="12">visibility  : VISIBLE</text>
+  </g>
+
+  <!-- Arrow 4 -> 5 -->
+  <path d="M 420 545 L 450 545" stroke="#d97706" stroke-width="3" marker-end="url(#arrow)" />
+
+  <!-- 5. Disappearance / Occlusion Analysis -->
+  <g transform="translate(460, 440)">
+    <rect x="0" y="0" width="350" height="210" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2" />
+    <text x="20" y="32" fill="#c2410c" font-size="16" font-weight="700">5. Disappearance Analysis</text>
+    <text x="20" y="55" fill="#475569" font-size="13" font-weight="500">Occlusion &amp; Missing Frame Streaks</text>
+    
+    <rect x="15" y="68" width="320" height="128" rx="6" fill="#ffffff" stroke="#fed7aa" stroke-width="1" />
+    <text x="28" y="92" fill="#9a3412" font-size="12" font-weight="700">Rule: Consecutive Missing Frames</text>
+    <text x="28" y="112" fill="#475569" font-size="12">• Gap &lt; MIN_MISSING (3 frames):</text>
+    <text x="45" y="130" fill="#64748b" font-size="11" font-weight="600">→ Ignore (Detection Flicker)</text>
+    <text x="28" y="152" fill="#475569" font-size="12">• Gap ≥ MIN_MISSING (3 frames):</text>
+    <text x="45" y="172" fill="#ea580c" font-size="11" font-weight="700">→ Flag Disappearance Event</text>
+  </g>
+
+  <!-- Arrow 5 -> 6 -->
+  <path d="M 810 545 L 840 545" stroke="#ea580c" stroke-width="3" marker-end="url(#arrow)" />
+
+  <!-- 6. Reappearance Analysis -->
+  <g transform="translate(850, 440)">
+    <rect x="0" y="0" width="380" height="210" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2" />
+    <text x="20" y="32" fill="#c2410c" font-size="16" font-weight="700">6. Reappearance &amp; Identity Switch</text>
+    <text x="20" y="55" fill="#475569" font-size="13" font-weight="500">Track Continuity &amp; Candidate Matching</text>
+    
+    <rect x="15" y="68" width="350" height="128" rx="6" fill="#ffffff" stroke="#fed7aa" stroke-width="1" />
+    <text x="25" y="90" fill="#1e293b" font-size="12" font-weight="600">• Case A: Same ID returns → <tspan fill="#16a34a" font-weight="700">Successful Re-ID</tspan></text>
+    <text x="25" y="112" fill="#1e293b" font-size="12">• Case B: Old ID lost, New ID appears within</text>
+    <text x="35" y="130" fill="#475569" font-size="11">spatial distance &amp; area threshold → <tspan fill="#dc2626" font-weight="700">Identity Switch</tspan></text>
+    <text x="25" y="152" fill="#1e293b" font-size="12">• Case C: Object never returns → <tspan fill="#d97706" font-weight="700">Permanent Loss</tspan></text>
+    <text x="25" y="174" fill="#64748b" font-size="11" font-style="italic">Proximity: Euclidean Dist / Diagonal &lt; 0.35</text>
+  </g>
+
+  <!-- Downward Arrow to Row 3 -->
+  <path d="M 1040 650 L 1040 685 L 670 685 L 670 715" stroke="#0f766e" stroke-width="3" fill="none" marker-end="url(#arrow-teal)" />
+
+  <!-- 7. Object Permanence Evaluation Metrics -->
+  <g transform="translate(80, 720)">
+    <rect x="0" y="0" width="1150" height="135" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2" />
+    <text x="20" y="30" fill="#991b1b" font-size="16" font-weight="700">7. Object Permanence Evaluation Metrics Module</text>
+    <text x="20" y="48" fill="#475569" font-size="12" font-weight="500">Quantitative Baseline Metrics (Proposed Research Formulations)</text>
+    
+    <g transform="translate(20, 58)">
+      <!-- Metric 1 (x: 0 to 350) -->
+      <rect x="0" y="0" width="350" height="65" rx="6" fill="#ffffff" stroke="#fca5a5" stroke-width="1" />
+      <text x="15" y="24" fill="#991b1b" font-size="13" font-weight="700">1. Detection Consistency (%)</text>
+      <text x="15" y="46" fill="#1e293b" font-size="12" font-weight="600">Detected Frames / Total Video Frames</text>
+
+      <!-- Metric 2 (x: 365 to 720) -->
+      <rect x="365" y="0" width="355" height="65" rx="6" fill="#ffffff" stroke="#fca5a5" stroke-width="1" />
+      <text x="380" y="24" fill="#991b1b" font-size="13" font-weight="700">2. Identity Consistency (%)</text>
+      <text x="380" y="46" fill="#1e293b" font-size="12" font-weight="600">1 − (Identity Switches / Tracked Objects)</text>
+
+      <!-- Metric 3 (x: 735 to 1110) -->
+      <rect x="735" y="0" width="375" height="65" rx="6" fill="#ffffff" stroke="#991b1b" stroke-width="2" />
+      <text x="750" y="24" fill="#991b1b" font-size="13" font-weight="800">3. OBJECT PERMANENCE SCORE (%)</text>
+      <text x="750" y="46" fill="#b91c1c" font-size="11" font-weight="700">Correct Re-IDs / Valid Disappearance Events</text>
+    </g>
+  </g>
+
+  <!-- Arrow 7 -> Outputs -->
+  <path d="M 650 855 L 650 885" stroke="#dc2626" stroke-width="3" marker-end="url(#arrow)" />
+
+  <!-- 8. Output Module (3 Branches) -->
+  <g transform="translate(80, 890)">
+    <rect x="0" y="0" width="1150" height="100" rx="10" fill="#f8fafc" stroke="#475569" stroke-width="2" />
+    <text x="20" y="28" fill="#1e293b" font-size="15" font-weight="700">Evaluation Outputs &amp; Deliverables</text>
+    
+    <!-- Branch A -->
+    <rect x="20" y="38" width="340" height="48" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="35" y="58" fill="#0f172a" font-size="12" font-weight="700">A. Annotated Video (.mp4)</text>
+    <text x="35" y="74" fill="#64748b" font-size="11">Bounding Boxes, Track IDs, Event Overlays</text>
+
+    <!-- Branch B -->
+    <rect x="380" y="0" width="370" height="48" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" transform="translate(0, 38)" />
+    <text x="395" y="58" fill="#0f172a" font-size="12" font-weight="700">B. Numerical Reports (.csv &amp; .json)</text>
+    <text x="395" y="74" fill="#64748b" font-size="11">Frame histories, event logs, summary metrics</text>
+
+    <!-- Branch C -->
+    <rect x="770" y="0" width="360" height="48" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" transform="translate(0, 38)" />
+    <text x="785" y="58" fill="#0f172a" font-size="12" font-weight="700">C. Visualizations (.png)</text>
+    <text x="785" y="74" fill="#64748b" font-size="11">Matplotlib track trajectories &amp; score charts</text>
+  </g>
+
+
+  <!-- ========================================== -->
+  <!-- REGION 2: PROPOSED FUTURE WORK (~70%)      -->
+  <!-- ========================================== -->
+  <rect x="1300" y="130" width="570" height="880" rx="16" fill="#ffffff" stroke="#7e22ce" stroke-width="3" stroke-dasharray="8 6" filter="url(#shadow)" />
+  
+  <!-- Region 2 Title Header -->
+  <rect x="1300" y="130" width="570" height="50" rx="16" fill="#7e22ce" />
+  <rect x="1300" y="160" width="570" height="20" fill="#7e22ce" />
+  <text x="1325" y="163" fill="#ffffff" font-size="20" font-weight="700">PROPOSED FUTURE WORK — ~70%</text>
+  <text x="1845" y="163" fill="#f3e8ff" font-size="13" font-weight="600" text-anchor="end">Stage 2 to Stage 6 Roadmap</text>
+
+  <!-- Clean Short Connecting Arrow Between Box Edges (1270, 570) -> (1292, 570) -->
+  <path d="M 1270 570 L 1292 570" stroke="#7e22ce" stroke-width="3.5" stroke-dasharray="5 4" fill="none" marker-end="url(#arrow-future)" />
+
+  <!-- Future Module 1: Persistent Object Memory -->
+  <g transform="translate(1330, 205)">
+    <rect x="0" y="0" width="510" height="135" rx="10" fill="#faf5ff" stroke="#a855f7" stroke-width="2" stroke-dasharray="6 4" />
+    <text x="20" y="30" fill="#6b21a8" font-size="16" font-weight="700">Stage 2: Persistent Object Memory Bank</text>
+    <text x="20" y="48" fill="#64748b" font-size="12">Maintains long-term state across extended occlusions</text>
+    
+    <rect x="15" y="60" width="480" height="60" rx="6" fill="#ffffff" stroke="#e9d5ff" stroke-width="1" />
+    <text x="25" y="80" fill="#581c87" font-size="12" font-weight="600">• State Vector: [ID, Appearance, Position, Velocity, Visibility Flag]</text>
+    <text x="25" y="100" fill="#581c87" font-size="12" font-weight="600">• Visibility States: VISIBLE | OCCLUDED | OUT_OF_BOUNDS</text>
+  </g>
+
+  <!-- Future Module 2: Deep Appearance Re-ID -->
+  <g transform="translate(1330, 360)">
+    <rect x="0" y="0" width="510" height="135" rx="10" fill="#faf5ff" stroke="#a855f7" stroke-width="2" stroke-dasharray="6 4" />
+    <text x="20" y="30" fill="#6b21a8" font-size="16" font-weight="700">Stage 3: Deep Feature Appearance Re-ID</text>
+    <text x="20" y="48" fill="#64748b" font-size="12">Re-identification model for long disappearance gaps</text>
+    
+    <rect x="15" y="60" width="480" height="60" rx="6" fill="#ffffff" stroke="#e9d5ff" stroke-width="1" />
+    <text x="25" y="80" fill="#581c87" font-size="12" font-weight="600">• Pretrained Re-ID Model (e.g. OSNet / Re-ID Transformer)</text>
+    <text x="25" y="100" fill="#581c87" font-size="12" font-weight="600">• Cosine Similarity Matrix between pre &amp; post occlusion features</text>
+  </g>
+
+  <!-- Future Module 3: Scene / Shot Boundary Detection -->
+  <g transform="translate(1330, 515)">
+    <rect x="0" y="0" width="510" height="135" rx="10" fill="#faf5ff" stroke="#a855f7" stroke-width="2" stroke-dasharray="6 4" />
+    <text x="20" y="30" fill="#6b21a8" font-size="16" font-weight="700">Stage 4: Scene / Shot Boundary Detection</text>
+    <text x="20" y="48" fill="#64748b" font-size="12">Frame temporal analysis to identify shot cuts and transitions</text>
+    
+    <rect x="15" y="60" width="480" height="60" rx="6" fill="#ffffff" stroke="#e9d5ff" stroke-width="1" />
+    <text x="25" y="80" fill="#581c87" font-size="12" font-weight="600">• Analyzes temporal frame changes to detect distinct visual segments</text>
+    <text x="25" y="100" fill="#581c87" font-size="12" font-weight="600">• Prevents legitimate shot cuts from being flagged as permanence failures</text>
+  </g>
+
+  <!-- Future Module 4: Memory-Guided Generation Feedback -->
+  <g transform="translate(1330, 670)">
+    <rect x="0" y="0" width="510" height="195" rx="10" fill="#faf5ff" stroke="#7e22ce" stroke-width="2" stroke-dasharray="6 4" />
+    <text x="20" y="30" fill="#6b21a8" font-size="16" font-weight="700">Stage 5 &amp; 6: Video Evaluation Benchmark &amp; Feedback</text>
+    <text x="20" y="48" fill="#64748b" font-size="12">Conditioning video generators with object-permanence memory</text>
+    
+    <rect x="15" y="60" width="480" height="120" rx="6" fill="#ffffff" stroke="#e9d5ff" stroke-width="1" />
+    <text x="25" y="82" fill="#581c87" font-size="12" font-weight="600">• Evaluation Benchmark on Sora, Runway Gen-2, Pika, SVD</text>
+    <text x="25" y="102" fill="#581c87" font-size="12" font-weight="600">• Test categories: Occlusion, Camera pan, Multi-similar objects</text>
+    <text x="25" y="122" fill="#7e22ce" font-size="12" font-weight="700">• Memory-Conditioned Diffusion Loss / Reward Guidance</text>
+    <text x="25" y="142" fill="#64748b" font-size="11" font-style="italic">Long-term research goal: Enforce physical object persistence in video AI</text>
+  </g>
+
+  <!-- LEGEND BOX (Bottom Right Inside 70% Area) -->
+  <g transform="translate(1330, 885)">
+    <rect x="0" y="0" width="510" height="105" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="15" y="22" fill="#0f172a" font-size="13" font-weight="700">Architecture Diagram Legend</text>
+    
+    <rect x="15" y="36" width="30" height="16" rx="3" fill="#ffffff" stroke="#0f766e" stroke-width="2" />
+    <text x="55" y="49" fill="#334155" font-size="11" font-weight="600">Solid Border = Current 30% Prototype Implementation</text>
+    
+    <rect x="15" y="60" width="30" height="16" rx="3" fill="#faf5ff" stroke="#7e22ce" stroke-width="2" stroke-dasharray="4 3" />
+    <text x="55" y="73" fill="#334155" font-size="11" font-weight="600">Dashed Border = Proposed 70% Future Research Work</text>
+
+    <line x1="15" y1="88" x2="45" y2="88" stroke="#475569" stroke-width="2" marker-end="url(#arrow)" />
+    <text x="55" y="92" fill="#334155" font-size="11" font-weight="600">Arrows = Directional Data Flow / Pipeline Dependency</text>
+  </g>
+
+</svg>

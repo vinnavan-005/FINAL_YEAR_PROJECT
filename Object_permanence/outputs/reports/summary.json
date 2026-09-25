@@ -1,0 +1,26 @@
+{
+  "video_file": "testball5.mp4",
+  "total_frames": 121,
+  "duration_sec": 5.04,
+  "fps": 24.0,
+  "frames_with_detections": 40,
+  "tracked_objects_count": 2,
+  "disappearance_events_count": 2,
+  "reappearance_events_count": 2,
+  "successful_reidentifications": 1,
+  "identity_switches": 1,
+  "lost_without_recovery": 0,
+  "metrics": {
+    "detection_consistency_pct": 33.06,
+    "identity_consistency_pct": 50.0,
+    "object_permanence_score_pct": 50.0
+  },
+  "memory_bank_metrics": {
+    "total_occlusion_episodes": 2,
+    "successful_memory_recoveries": 0,
+    "memory_recovery_rate_pct": 0.0,
+    "mean_trajectory_prediction_error_px": 0.0,
+    "max_occlusion_gap_survived_frames": 0,
+    "persistent_entities_count": 2
+  }
+}

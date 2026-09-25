@@ -1,0 +1,3 @@
+event_id,object_class,original_track_id,last_visible_frame,first_reappeared_frame,missing_duration,new_track_id,event_type,reidentified,confidence_score,spatial_distance_norm
+1,ball,1,26,99,72,1,SUCCESSFUL_REIDENTIFICATION,True,1.0,0.0
+2,ball,1,99,100,0,2,TRACK_ID_SWAP,False,0.995,0.0052
